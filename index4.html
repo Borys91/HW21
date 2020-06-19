@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      document.addEventListener("keydown", function (e) {
+        console.dir(e)
+         if (e.ctrlKey==true) {
+            if(e.key == "s") {
+               alert("Сохранено");
+            } 
+            else if(e.key == "a") {
+               alert("Bыбрано все");
+            } 
+            else if(e.code == "KeyS" && e.shiftKey==true) {
+               alert("Cохранено все");
+            } 
+            // else {e.preventDefault();}
+         }
+     e.preventDefault();
+         
+      })
+     
+   </script>
+</body>
+
+</html>

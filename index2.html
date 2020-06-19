@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptas repellendus obcaecati, totam assumenda exercitationem, perspiciatis ducimus molestiae corporis commodi dolor asperiores sed nobis, rem fugiat! Facere fuga praesentium hic.</p>
+   <p>Lorem ipsum dolor sit amet.</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit deserunt ducimus veritatis laboriosam dolor similique, dicta quas nulla nisi architecto blanditiis explicabo aliquid distinctio facilis ad. Laborum harum et voluptatibus!</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae sint labore?</p>
+   
+   
+   
+   <script>
+      let paragraphs = document.querySelectorAll("p")
+      let color="black"
+      for(let i=0; i<paragraphs.length; i++){
+        let f= function(e){
+       if(e.key=="r"){
+          color="red"
+       }
+       else if(e.key=="g"){
+         color="green"
+       }
+       else if(e.key=="b"){
+         color="blue"
+       }
+       paragraphs[i].style.color=color;
+      }
+     document.addEventListener("keyup",f)
+      }
+         
+   </script>
+</body>
+</html>

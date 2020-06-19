@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      div{
+         position: absolute;
+         width: 25px;
+         height: 25px;
+         background-color: chartreuse;
+      }
+   </style>
+</head>
+<body>
+   <div></div>
+   <script>
+   let leftPos=0,topPos=0;
+   
+   document.addEventListener("keydown",function(e){
+      if(document.documentElement.clientHeight<topPos || topPos<-20 ){
+         topPos=10;
+      }
+      if(document.documentElement.clientWidth<leftPos || leftPos<-20){
+         leftPos=10;
+      }
+         if(e.key=="ArrowRight"){
+            leftPos+=10;
+            document.querySelector("div").style.left=leftPos+"px"
+            }
+         if(e.key=="ArrowLeft"){
+            leftPos-=10;
+            document.querySelector("div").style.left=leftPos+"px"
+            }
+         if(e.key=="ArrowUp"){
+            topPos-=10;
+            document.querySelector("div").style.top=topPos+"px"
+         }
+         if(e.key=="ArrowDown"){
+            topPos+=10;
+            document.querySelector("div").style.top=topPos+"px"
+         }
+   })
+   </script>
+</body>
+</html>

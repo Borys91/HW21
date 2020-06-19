@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      #btn{
+         position: absolute;
+         display:inline-block;
+         background-color: aquamarine;
+         padding: 10px;
+         transition: 0.1s;
+         margin-top: 30px;
+      }
+   </style>
+</head>
+<body>
+   <form action="GET">
+   <input type="checkbox" name="1" id="">
+   <span>Получить скидку</span>
+   <br>
+   <input type="reset" value="Получить скидку" id="btn">
+   </form>
+  <script>
+     let btn=document.getElementById("btn") 
+     btn.addEventListener("mousemove",function(e){
+        let leftPos=Math.random()*700;
+        let topPos=Math.random()*700;
+        btn.style.top=leftPos+"px"
+        btn.style.left=topPos+"px"
+     },false)
+   </script>
+</body>
+</html>
